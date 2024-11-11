@@ -1,29 +1,4 @@
 #!/usr/bin/env nextflow 
-
-/* 
- * Copyright (c) 2020-2021, Seqera Labs 
- * Copyright (c) 2013-2019, Centre for Genomic Regulation (CRG).
- *
- * This Source Code Form is subject to the terms of the Mozilla Public
- * License, v. 2.0. If a copy of the MPL was not distributed with this
- * file, You can obtain one at http://mozilla.org/MPL/2.0/. 
- * 
- * This Source Code Form is "Incompatible With Secondary Licenses", as
- * defined by the Mozilla Public License, v. 2.0.
- */
-
-/*
- * Proof of concept of a RNAseq pipeline implemented with Nextflow
- *
- * Authors:
- * - Paolo Di Tommaso <paolo.ditommaso@gmail.com>
- * - Emilio Palumbo <emiliopalumbo@gmail.com>
- * - Evan Floden <evanfloden@gmail.com>
- */
-
-/* 
- * enables modules 
- */
 nextflow.enable.dsl = 2
 
 /*
