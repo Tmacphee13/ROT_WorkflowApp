@@ -1,4 +1,3 @@
-
 process QUANT {
     publishDir "$params.outdir/quant"
     tag "$pair_id"

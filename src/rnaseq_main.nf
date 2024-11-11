@@ -31,8 +31,8 @@ nextflow.enable.dsl = 2
  * given `params.foo` specify on the run command line `--foo some_value`.
  */
 
-params.reads = "$baseDir/data/ggal/ggal_gut_{1,2}.fq"
-params.transcriptome = "$baseDir/data/ggal/ggal_1_48850000_49020000.Ggal71.500bpflank.fa"
+params.reads = "$baseDir/data/ggal/*{1,2}.fq"
+params.transcriptome = "$baseDir/data/ggal/transcriptome.fa"
 params.outdir = "results"
 
 log.info """\

@@ -1,0 +1,1 @@
+nextflow run rnaseq_custom.nf -c ../nextflow.config -profile docker -params-file input/rnaseq_custom/params.json

@@ -1,0 +1,4 @@
+{
+    "samplesheet": "input/rnaseq_custom/samplesheet.csv",
+    "outdir": "results"
+}

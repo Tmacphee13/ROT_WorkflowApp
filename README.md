@@ -14,7 +14,7 @@ The steps for going from raw fastq to processed counts and qc include:
 3. count generation using STAR/Kallisto
 
 
-#### Bulk RNASEQ 
+#### Bulk RNASEQ (PDiTomasso)
 
 For this use case, we are going to use Paolo DiTomasso's slimmed down version of the RNAseq workflow. This workflow contains index, quant, and qc steps using salmon and fastqc (with multiqc for collection and reporting of qc output). To do some more custom count generation, we may also include a quant workflow step with bash processing of the raw fastq files.  
 
@@ -24,6 +24,18 @@ To run the rnaseq workflow, follow these steps:
 3. Run the workflow with `./src/run_rnaseq.sh`  
 
 Output will be sent to `src/results` with multiqc results contained in the html file and count results in the `src/results/quant` folder
+
+#### Bulk RNASEQ (Custom)
+
+This is a more bespoke, but less comprehensive version of the RNAseq workflow. It leverages samplesheet input, and a simple script for counting the number of unique reads in a sample. It may or may not do alignment depending on how far we get.  
+
+**Samplesheet structure**
+|sample_id|read1|read2|
+|---------|-----|-----|
+|sample001|001_R1.fastq.gz|001_R2.fastq.gz|
+|sample002|002_R1.fastq.gz|002_R2.fastq.gz|
+|...|...|...|
+|sample00n|00n_R1.fastq.gz|00n_R2.fastq.gz|
 
 
 

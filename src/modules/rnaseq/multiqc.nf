@@ -1,7 +1,5 @@
-params.outdir = 'results'
-
 process MULTIQC {
-    publishDir params.outdir, mode:'copy'
+    publishDir params.outdir
 
     input:
     path('*') 

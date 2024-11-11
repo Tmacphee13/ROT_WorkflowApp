@@ -1,4 +1,3 @@
-
 process INDEX {
     tag "$transcriptome.simpleName"
 

@@ -1,8 +1,6 @@
-params.outdir = 'results'
-
 process FASTQC {
-    tag "FASTQC on $sample_id"
     publishDir params.outdir
+    tag "FASTQC on $sample_id"
 
     input:
     tuple val(sample_id), path(reads)
