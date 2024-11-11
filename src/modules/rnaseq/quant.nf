@@ -1,6 +1,6 @@
 
 process QUANT {
-    container 'rnaseq-nf:latest'
+    publishDir "$params.outdir/quant"
     tag "$pair_id"
 
     input:

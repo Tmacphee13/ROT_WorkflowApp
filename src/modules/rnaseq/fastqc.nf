@@ -1,7 +1,6 @@
 params.outdir = 'results'
 
 process FASTQC {
-    container 'rnaseq-nf:latest'
     tag "FASTQC on $sample_id"
     publishDir params.outdir
 

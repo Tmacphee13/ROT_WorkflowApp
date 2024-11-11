@@ -1,0 +1,1 @@
+nextflow run rnaseq_main.nf -c ../nextflow.config -profile docker
