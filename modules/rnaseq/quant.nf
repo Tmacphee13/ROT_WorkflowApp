@@ -1,6 +1,6 @@
 
 process QUANT {
-    container 
+    container 'rnaseq-nf:latest'
     tag "$pair_id"
 
     input:

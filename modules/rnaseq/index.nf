@@ -1,5 +1,6 @@
 
 process INDEX {
+    container 'rnaseq-nf:latest'
     tag "$transcriptome.simpleName"
 
     input:

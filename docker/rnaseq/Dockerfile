@@ -1,8 +1,8 @@
-FROM continuumio/miniconda3:4.10.3
+FROM continuumio/miniconda3:latest
 
 COPY conda.yml .
 RUN \
-   conda env update -n root -f conda.yml --debug \
+conda env update -n root -f conda.yml --debug \
 && conda clean -a
 
 RUN apt-get install -y procps

@@ -1,6 +1,7 @@
 params.outdir = 'results'
 
 process MULTIQC {
+    container 'rnaseq-nf:latest'
     publishDir params.outdir, mode:'copy'
 
     input:
