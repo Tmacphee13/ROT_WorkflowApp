@@ -38,5 +38,24 @@ This is a more bespoke, but less comprehensive version of the RNAseq workflow. I
 |sample00n|00n_R1.fastq.gz|00n_R2.fastq.gz|
 
 
+### Flask Front End
+
+> Hello user, which workflow would you like to run?
+
+Upon selecting a workflow, the user should be presented with the workflow parameters to fill in. If the parameter is something like a samplesheet, they should then have the option to either create one manually by filling in a table, or upload the csv from a file browser. Unsure of the best way to provide a uniform UI across all different workflows, we will need to flesh that out as we go.  
+
+We will use subprocess commands from app/utils.py as our workflow entrypoint rather than using bash scripts as we have for manual entry (src/run_rnaseq.sh). After selecting a workflow and populating the parameters, a `run_workflow()` will run like this:
+
+```
+def run_workflow(workflow, params_file):
+    command = [
+        "nextflow", "run", workflow,
+        "-params-file", params_file,
+        "-c", "nextflow.config"
+    ]
+    result = subprocess.run(command, capture_output=True, text=True)
+    return result.stdout, result.stderr
+```
+
 
 

@@ -1,1 +1,0 @@
-docker pull quay.io/nextflow/rnaseq-nf:latest
